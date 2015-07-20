@@ -1,0 +1,34 @@
+package Tabbed;
+import javax.swing.JTabbedPane;
+import javax.swing.JFrame;
+
+/***********************************************************************
+Program Name: ProgramName.java
+Programmer's Name: Ricardo McCauley 
+Program Description: Program JFrame with tabs for OfficeareaCalculator , and DayGui
+***********************************************************************/
+public class TabbedWeekFour extends JFrame {
+
+	public TabbedWeekFour() {
+ 
+    JTabbedPane jtp = new JTabbedPane();
+    getContentPane().add(jtp);
+    
+  jtp.addTab(" Day GUI",new DayGui());
+   jtp.addTab("office area calc", new OfficeAreaCalculator());
+   
+   setSize(310,210);
+   setLocationRelativeTo(null);
+   setVisible(true);
+   add(jtp);
+    
+    
+	}
+	
+	public static void main(String[] args){
+		TabbedWeekFour test = new TabbedWeekFour();
+		test.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+
+}
