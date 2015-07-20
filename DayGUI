@@ -1,0 +1,65 @@
+package Tabbed;
+import javax.swing.JButton;
+
+import javax.swing.JFrame;
+
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
+
+
+import java.awt.*;
+import java.awt.event.*;
+
+/***********************************************************************
+Program Name: ProgramName.java
+Programmer's Name: Ricardo McCauley 
+Program Description: Prints out message good or bad 
+***********************************************************************/
+public class DayGui extends JPanel {
+
+
+		public JButton GoodB;
+		public JButton BadB;
+		public JFrame mainFrame;
+	
+	
+			public DayGui()
+			{
+			
+			
+				GoodB = new JButton("Good");
+				GoodB.setForeground(Color.BLUE);
+				GoodB.setBackground(Color.GREEN);
+				BadB = new JButton("Bad");
+				BadB.setForeground(Color.red);
+				BadB.setBackground(Color.yellow);
+				
+			
+				
+				add(GoodB);
+				add(BadB);
+				
+				GoodB.setMnemonic('G');
+				BadB.setMnemonic('B');
+		
+	
+				
+				ButtonsHandler bhandler = new ButtonsHandler();
+				GoodB.addActionListener(bhandler);
+				BadB.addActionListener(bhandler);
+			//	mainFrame.setVisible(true);
+			}
+			
+		
+			class ButtonsHandler implements ActionListener{
+			
+		public void actionPerformed(ActionEvent e){
+			if(e.getSource()==GoodB)
+				JOptionPane.showMessageDialog(null, "Today is a good day"
+				,"Event Handler Message", JOptionPane.INFORMATION_MESSAGE);
+			
+			if(e.getSource()== BadB)
+				JOptionPane.showMessageDialog(null, "Today is a bad day"
+						,"Event Handler Message", JOptionPane.INFORMATION_MESSAGE);
+		}}}
