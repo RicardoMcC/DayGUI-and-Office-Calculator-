@@ -1,1 +1,2 @@
 # DayGUI-and-Office-Calculator-
+This program contains two smaller projects combined on tabs.  The first tab will be the Day GUI, in which the user can select two buttons indicating whether today is a good day, or a bad day. The second tab will be the Office calculator, which asks the user to enter the width, and the height of a rectangle office.  After the user input the data, the user will receive the office area. 
